@@ -50,8 +50,8 @@ namespace CassiOPeia
             menu.AddLabel("v0.01 - Initial release");
             menu.AddLabel("v0.02 - Auto-Ultimate, Harass");
             menu.AddLabel("v0.03 - Skin Hack");
-            menu.AddLabel("v0.04 - Deleted Skin Hack (Was causing bugsplats), Added Interrupter, Toggle Q Harass, Farm with E");
-
+            menu.AddLabel("v0.04 - Deleted Skin Hack (Was causing bugsplats),");
+            menu.AddLabel("v0.04 - Added Interrupter, Toggle Q Harass, Farm with E");
             ComboMenu = menu.AddSubMenu("Combo Menu", "comboMenu");
             
             ComboMenu.AddGroupLabel("Combo Menu");
