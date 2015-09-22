@@ -77,7 +77,7 @@ namespace CassiOPeia
 
         }
 
-        static void Interrupter_OnInterruptableSpell(Obj_AI_Base sender, InterruptableSpellEventArgs e)
+        private static void Interrupter_OnInterruptableSpell(Obj_AI_Base sender, Interrupter.InterruptableSpellEventArgs e)
         {
             if (UltimateMenu["ultimateinterruptt"].Cast<CheckBox>().CurrentValue)
             if (sender.IsValidTarget(Program.R.Range))

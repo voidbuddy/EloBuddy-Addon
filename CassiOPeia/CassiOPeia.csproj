@@ -46,9 +46,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\EB\System\SharpDX.dll</HintPath>
     </Reference>
-    <Reference Include="SharpDX.Direct3D9">
-      <HintPath>..\..\..\..\..\Desktop\Elobuddy\SharpDX.Direct3D9.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
