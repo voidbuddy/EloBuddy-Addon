@@ -62,7 +62,7 @@ namespace CassiOPeia
             HarassMenu = menu.AddSubMenu("Harass Menu", "harassMenu");
             HarassMenu.Add("qHarass", new CheckBox("Use Q"));
             HarassMenu.Add("eHarass", new CheckBox("Use E"));
-            HarassMenu.Add("qHarassToggle", new KeyBind("Q Toggle Harass", false, KeyBind.BindTypes.PressToggle, 'T'));
+            HarassMenu.Add("qHarassToggle", new KeyBind("Q Toggle Harass", false, KeyBind.BindTypes.PressToggle, 'A'));
 
             UltimateMenu = menu.AddSubMenu("Ultimate", "ultimateMenu");
             UltimateMenu.Add("useautoultimate", new CheckBox("Use Auto-Ultimate"));
@@ -74,7 +74,7 @@ namespace CassiOPeia
             DrawingsMenu.Add("drawq", new CheckBox("Draw Q Range"));
 
             Interrupter.OnInterruptableSpell += Interrupter_OnInterruptableSpell;
-
+            Game.OnTick += Game_OnTick;
         }
 
         private static void Interrupter_OnInterruptableSpell(Obj_AI_Base sender, Interrupter.InterruptableSpellEventArgs e)
@@ -88,7 +88,7 @@ namespace CassiOPeia
         private static void Drawing_OnDraw(EventArgs args)
         {
             if (DrawingsMenu["drawq"].Cast<CheckBox>().CurrentValue)
-                new Circle { Color = E.IsReady() ? Color.Green : Color.Red, Radius = Program.Q.Range }.Draw(ObjectManager.Player.Position);
+                new Circle { Color = Color.Red, Radius = Program.Q.Range }.Draw(ObjectManager.Player.Position);
         }
 
         private static void Game_OnTick(EventArgs args)
@@ -101,7 +101,7 @@ namespace CassiOPeia
             {
                 StateManager.Harass();
             }
-            if (Orbwalker.ActiveModesFlags.HasFlag(Orbwalker.ActiveModes.LaneClear))
+            if (Orbwalker.ActiveModesFlags.HasFlag(Orbwalker.ActiveModes.LastHit))
             {
                 StateManager.LastHit();
             }

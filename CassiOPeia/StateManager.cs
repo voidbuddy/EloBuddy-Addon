@@ -89,7 +89,7 @@ namespace CassiOPeia
         {
             var target = TargetSelector2.GetTarget(850, DamageType.Magical);
             {
-                if (Program.Q.IsReady() && Program.HarassMenu["qHarassToggle"].Cast<CheckBox>().CurrentValue && target.IsValidTarget(Program.Q.Range))
+                if (Program.Q.IsReady() && Program.HarassMenu["qHarassToggle"].Cast<KeyBind>().CurrentValue && target.IsValidTarget(Program.Q.Range))
                 {
                     Program.Q.Cast(target);
                 }
@@ -109,7 +109,7 @@ namespace CassiOPeia
                     {
                         if (enemy.CountEnemiesInRange(500) >= Program.UltimateMenu["minR"].Cast<Slider>().CurrentValue && Program.UltimateMenu["useautoultimate"].Cast<CheckBox>().CurrentValue && enemy.IsFacing(ObjectManager.Player))
                         {
-                            Program.R.Cast(enemy.Position);
+                            Program.R.Cast(target.Position);
                         }
                     }
                 }
