@@ -49,8 +49,10 @@ namespace Leblonk
             R = new Spell.Targeted(SpellSlot.R, 720);
 
             menu = MainMenu.AddMenu("LeBlanc", "LeBlanc");
-            menu.AddGroupLabel("CassiOPeia");
-            menu.AddLabel("Made by vOID");
+            menu.AddGroupLabel("Once you go leblonk you never go back");
+            menu.AddGroupLabel("ヽ༼ຈل͜ຈ༽ﾉ RAISE YOUR DONGERS ヽ༼ຈل͜ຈ༽ﾉ ");
+            menu.AddLabel("Made by vOID github.com/voidbuddy");
+            menu.AddLabel("www.elobuddy.net/user/188-void/");
 
             ComboMenu = menu.AddSubMenu("Combo Menu", "comboMenu");
 
@@ -82,6 +84,7 @@ namespace Leblonk
             FleeMenu.Add("useWR", new CheckBox("Flee with RW"));
 
             DrawMenu = menu.AddSubMenu("Draw Menu", "drawMenu");
+            DrawMenu.AddGroupLabel("Draw Menu");
             DrawMenu.Add("drawQ", new CheckBox("Draw Q"));
             DrawMenu.Add("drawE", new CheckBox("Draw E"));
             DrawMenu.Add("drawWQ", new CheckBox("Draw W+Q"));
