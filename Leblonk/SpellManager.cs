@@ -133,11 +133,6 @@ namespace Leblonk
             }
         }
 
-        public static void ComboWR()
-        {
-
-        }
-
         public static void Harass()
         {
             var target = TargetSelector2.GetTarget(720, DamageType.Magical);
@@ -216,6 +211,17 @@ namespace Leblonk
                     var predR = Prediction.Position.PredictLinearMissile(target, Program.E.Range, 55, 250, 1600, 0);                  
                     Program.R.Cast(predR.CastPosition);
                     
+                }
+            }
+        }
+
+        public static void ToggleHarass()
+        {
+            var target = TargetSelector2.GetTarget(720, DamageType.Magical);
+            {
+                if (Program.Q.IsReady() && Program.HarassMenu["qHarassToggle"].Cast<KeyBind>().CurrentValue && target.IsValidTarget(Program.Q.Range))
+                {
+                    Program.Q.Cast(target);
                 }
             }
         }
