@@ -72,7 +72,8 @@ namespace Leblonk
             HarassMenu.Add("useW", new CheckBox("Use W"));
             HarassMenu.AddSeparator();
             HarassMenu.Add("useE", new CheckBox("Use E"));
-            HarassMenu.Add("qHarassToggle", new KeyBind("Q Toggle Harass", false, KeyBind.BindTypes.PressToggle, 'T'));
+            HarassMenu.AddSeparator();
+            HarassMenu.Add("qHarassToggle", new KeyBind("Q Toggle Harass", false, KeyBind.BindTypes.PressToggle, 'Z'));
 
             KillstealMenu = menu.AddSubMenu("Killsteal Menu", "killstealMenu");
             KillstealMenu.AddGroupLabel("Killsteal Menu");
@@ -124,11 +125,8 @@ namespace Leblonk
             if (Orbwalker.ActiveModesFlags.HasFlag(Orbwalker.ActiveModes.None))
             {
                 SpellManager.Killsteal();
-            }
-            {
                 SpellManager.ToggleHarass();
             }
-
         }
 
         public static Dictionary<string, string> Spells = new Dictionary<string, string>
