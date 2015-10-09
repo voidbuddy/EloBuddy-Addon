@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("AddonTemplate")]
+[assembly: AssemblyTitle("DevBuddy2.0")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("AddonTemplate")]
+[assembly: AssemblyProduct("DevBuddy2.0")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("3203502a-4253-4edd-9331-74a49c616ed2")]
+[assembly: Guid("a381d8c5-f439-4f0f-a61b-c62bc4c57786")]
 
 // Version information for an assembly consists of the following four values:
 //
