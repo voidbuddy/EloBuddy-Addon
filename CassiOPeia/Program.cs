@@ -75,6 +75,7 @@ namespace CassiOPeia
 
             Interrupter.OnInterruptableSpell += Interrupter_OnInterruptableSpell;
             Game.OnTick += Game_OnTick;
+            Drawing.OnDraw += OnDraw;
         }
 
         private static void Interrupter_OnInterruptableSpell(Obj_AI_Base sender, Interrupter.InterruptableSpellEventArgs e)
@@ -85,10 +86,12 @@ namespace CassiOPeia
                     Program.R.Cast(sender);
         }
 
-        private static void Drawing_OnDraw(EventArgs args)
+        private static void OnDraw(EventArgs args)
         {
-            if (DrawingsMenu["drawq"].Cast<CheckBox>().CurrentValue)
-                new Circle { Color = Color.Red, Radius = Program.Q.Range }.Draw(ObjectManager.Player.Position);
+            Boolean drawQ = DrawingsMenu["drawq"].Cast<CheckBox>().CurrentValue;
+
+            if (drawQ)
+                Circle.Draw(SharpDX.Color.Aqua, Q.Range, Player.Instance.Position);
         }
 
         private static void Game_OnTick(EventArgs args)
