@@ -140,7 +140,7 @@ namespace Leblonk.Activator
                     {
                         if (!Orbwalker.ActiveModesFlags.HasFlag(Orbwalker.ActiveModes.Combo)) continue;
 
-                        var target = (Obj_AI_Base) Orbwalker.GetTarget();
+                        var target = TargetSelector2.GetTarget(1320, DamageType.Magical);
 
                         var menuItem = OffensiveMenu[item.Name + "Manager"].Cast<CheckBox>() ??
                                        Offensive2Menu[item.Name + "Manager"].Cast<CheckBox>();
